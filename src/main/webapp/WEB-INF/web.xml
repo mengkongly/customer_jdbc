@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+    
+  
+  <servlet>
+    	<servlet-name>SubmitLogin</servlet-name>
+    	<servlet-class>com.rupp.sample.web.LoginCustomer</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>SubmitLogin</servlet-name>
+    	<url-pattern>/submitlogin</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    	<servlet-name>customerList</servlet-name>    	
+    	<servlet-class>com.rupp.sample.web.ListCustomer</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>customerList</servlet-name>
+    	<url-pattern>/customerlist</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    	<servlet-name>ActAddUpdateCustomer</servlet-name>    	
+    	<servlet-class>com.rupp.sample.web.ActAddUpdateCustomer</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>ActAddUpdateCustomer</servlet-name>
+    	<url-pattern>/addcustomer</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    	<servlet-name>CustomerForm</servlet-name>
+    	<servlet-class>com.rupp.sample.web.CustomerForm</servlet-class>    	
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>CustomerForm</servlet-name>
+    	<url-pattern>/customerform</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    	<servlet-name>CustomerDelete</servlet-name>
+    	<servlet-class>com.rupp.sample.web.DeleteCustomer</servlet-class>    	
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>CustomerDelete</servlet-name>
+    	<url-pattern>/customerdelete</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    	<servlet-name>signOut</servlet-name>    	
+    	<servlet-class>com.rupp.sample.web.LogoutCustomer</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>signOut</servlet-name>
+    	<url-pattern>signout</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    	<servlet-name>signIn</servlet-name>    	
+    	<jsp-file>/sign_in.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>signIn</servlet-name>
+    	<url-pattern>signin</url-pattern>
+    </servlet-mapping>
+    
+    <!-- welcome file -->
+   <welcome-file-list>  
+   <welcome-file>sign_in.jsp</welcome-file>  
+   <welcome-file>index.html</welcome-file>  
+  </welcome-file-list>  
+</web-app>
