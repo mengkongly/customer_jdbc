@@ -42,10 +42,6 @@ ArrayList<Users> arrUser	=	new ArrayList<Users>();
     			session.setAttribute("email", user.getEmail());
     			session.setAttribute("createDate", user.getCreateDate());
     			
-    			if(!user.getUrlPhoto().equals("")){
-	    			urlPhoto	=	request.getContextPath()+File.separator+"uploads"+File.separator+user.getUrlPhoto();
-	    			session.setAttribute("urlPhoto", urlPhoto);
-    			}
     			//System.out.println("Photo:"+urlPhoto);
     			session.setAttribute("authen", "1");
     			is_succ	=	true;    			
